@@ -14,8 +14,9 @@ struct homeElement_4: View {
     var body: some View {
         HStack{
                 Image(systemName: imageName)
+                    .resizable()
                     .foregroundColor(imageColor)
-                    .padding(.leading,20)
+                    .frame(width:35, height:35)
             
             VStack(alignment:.leading){
                 Text(text)
@@ -29,6 +30,7 @@ struct homeElement_4: View {
             .padding(.leading,10)
             Spacer()
         }
+        .padding(.leading,15)
         .frame(width:170, height: 70)
         .background(.black.opacity(0.6))
         .cornerRadius(15)
@@ -36,5 +38,5 @@ struct homeElement_4: View {
 }
 
 #Preview {
-    homeElement_4(imageName: "lock.fill", imageColor: .gray, text: "Apple TV")
+    homeElement_4(imageName: "appletv.fill", imageColor: .gray, text: "Apple TV")
 }

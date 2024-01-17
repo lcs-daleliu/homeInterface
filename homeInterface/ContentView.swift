@@ -152,12 +152,44 @@ struct ContentView: View {
                         .background(.black.opacity(0.6))
                         .cornerRadius(20)
                         VStack{
-                            homeElement_4(imageName: "lock.fill", imageColor: .gray, text: "Apple TV")
+                            HStack{
+                                ZStack {
+                                    Rectangle()
+                                        .cornerRadius(10)
+                                        .foregroundColor(.white)
+                                        .opacity(0.2)
+                                        .frame(width:40,height: 40)
+                                    Text("tv")
+                                        .foregroundColor(.white)
+                                }
+                                
+                                VStack(alignment:.leading){
+                                    Text("Apple TV")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                        .padding(.top,25)
+                                    Text("Not Playing")
+                                        .foregroundColor(lightGray)
+                                        .padding(.bottom,25)
+                                }
+                                .padding(.leading,10)
+                                Spacer()
+                            }
+                            .padding(.leading,15)
+                            .frame(width:170, height: 70)
+                            .background(.black.opacity(0.6))
+                            .cornerRadius(15)
+
                             homeElement_4(imageName: "homepodmini.fill", imageColor: lightGray, text: "HomePod")
                         }
                     }
                     
                      Spacer()
+                     Rectangle()
+                        .ignoresSafeArea()
+                        .foregroundStyle(Color.black)
+                        .opacity(0.2)
+                        .frame(height:30)
                     }
                 
                 }
